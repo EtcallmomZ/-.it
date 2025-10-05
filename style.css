@@ -1,0 +1,11 @@
+#description{
+    width: 800px;
+    height: 150px;
+    color: grey;
+}
+
+#edit{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 5em;
+}
