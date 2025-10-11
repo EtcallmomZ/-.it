@@ -5,10 +5,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request,"index.html")
 
-def log_in(request):
+def login(request):
     return render(request,"login.html")
 
 def form(request):
     return render(request,"form.html")
-
-

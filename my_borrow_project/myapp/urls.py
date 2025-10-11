@@ -3,6 +3,6 @@ from myapp import views
 
 urlpatterns = [
     path('',views.index),
-    path('log_in',views.log_in),
+    path('login',views.login),
     path('form',views.form)
 ]
