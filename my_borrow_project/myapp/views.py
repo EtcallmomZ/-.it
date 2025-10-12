@@ -10,3 +10,6 @@ def login(request):
 
 def form(request):
     return render(request,"form.html")
+
+def user(request):
+    return render(request,"user.html")
