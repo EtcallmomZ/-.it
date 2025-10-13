@@ -1,0 +1,87 @@
+.btn-outline-light{
+    background-color: white;
+    color: black;
+}
+.btn-outline-light:hover{
+    background-color: #FF8A9D;
+    color: white;
+}
+
+
+
+
+
+
+/* --- Card Styles --- */
+
+/* การ์ดหลัก (Login/Sign Up box) */
+.custom-card {
+    background-color: #FFE6EA; 
+    border-radius: 20px; 
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+}
+
+
+.custom-title {
+    font-size: 2.5rem;
+    color: #f06292; /* สีชมพูเข้ม */
+    font-weight: bold;
+}
+
+
+/* --- Form Styles --- */
+.form-label {
+    color: black !important; 
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+}
+
+
+.form-control {
+    border: 1px solid  #f06292!important;
+    background-color: #F8C8DC !important;
+    border-radius: 10px !important;
+    padding: 10px 15px !important;
+}
+
+
+.form-control:focus {
+    border-color:  #f06292 !important;
+    box-shadow: 0 0 0 0.25rem rgba(240, 98, 146, 0.25) !important;
+}
+
+
+
+.btn-custom-pink {
+    background-color: #f06292;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.btn-custom-pink:hover {
+    background-color: #FFB6C1;
+    color: white;
+}
+
+
+ 
+.custom-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.custom-link:hover {
+    color: #e83e8c;
+    text-decoration: underline;
+}
