@@ -4,7 +4,7 @@ from django.contrib import messages
 from .forms import SignUpForm # import signup มา
 #import autencation form มาอันนี้ django ให้มาเป็นฟอร์มสำเร็จ
 from django.contrib.auth.forms import AuthenticationForm 
-#import การใช้งานพร้อมเปลี่ยนชื่อไม่ให้มันซ้ำกัน
+#import การใช้งานพร้อมเปลี่ยนชื่อไม่ให้มันซ้ำกันเดี๋ยวทำงานไม่ได้
 from django.contrib.auth import authenticate , login as auth_login , logout as auth_logout 
 
 # Create your views here.
