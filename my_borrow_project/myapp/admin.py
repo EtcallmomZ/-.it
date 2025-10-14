@@ -1,5 +1,6 @@
 from django.contrib import admin
 from myapp.models import Item , BorrowRequest
+from myapp.models import Item,BorrowRequest
 
 # Register your models here.
 # บอกว่าให้สิทธิ์เฉพาะใครบ้าง พวกเรา admin เท่านั้นถึงจะมีสิทธิ์จัดการไฟล์หลังบ้าน
