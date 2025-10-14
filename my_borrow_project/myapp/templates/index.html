@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -43,5 +43,64 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+<!--อันนี้คือ ด้านล่าง-->
+<br>
+<div class="index_box_main">
+  <dev> <!--ฝั่งหมวดหมู่-->
+    <h1>หมวดหมู่</h1>
+    <dev class="index_box_type">
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+      <a class="btn index-outline-light " href = "type">
+        <img src="{% static 'photo/piano.png' %}" class="d-block w-100" alt="example">
+        <h5>example</h5>
+      </a>
+    </dev>
+  </dev>
+  <dev><!--มีเพื่อกันไม่ให้ 2 column ติดกันเกินไป--></dev>
+  <dev> <!--ฝั่งยอดนิยม-->
+    <h1 class="head_infrom">ยอดนิยม</h1>
+    <dev class="index_box_popular">
+      <index_box_popular_in>
+        <h1>1.</h1>
+        <dev></dev>
+        <img src="{% static 'photo/piano_2.png' %}" class="d-block w-100" alt="example">
+      </index_box_popular_in>
+      <index_box_popular_in>
+        <h1>2.</h1>
+        <dev></dev>
+        <img src="{% static 'photo/piano_2.png' %}" class="d-block w-100" alt="example">
+      </index_box_popular_in>
+      <index_box_popular_in>
+        <h1>3.</h1>
+        <dev></dev>
+        <img src="{% static 'photo/piano_2.png' %}" class="d-block w-100" alt="example">
+      </index_box_popular_in>
+      <index_box_popular_in>
+        <h1>4.</h1>
+        <dev></dev>
+        <img src="{% static 'photo/piano_2.png' %}" class="d-block w-100" alt="example">
+      </index_box_popular_in>
+    </dev>
+  </dev>
 </div>
 {% endblock %}

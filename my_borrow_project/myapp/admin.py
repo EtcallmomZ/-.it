@@ -1,5 +1,5 @@
 from django.contrib import admin
-from myapp.models import Person
+from myapp.models import Item,BorrowRequest
 
 # Register your models here.
 # บอกว่าให้สิทธิ์เฉพาะใครบ้าง user จะเห็นหน้าเว็บคนละแบบ

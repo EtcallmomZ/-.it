@@ -7,11 +7,6 @@
     color: white;
 }
 
-
-
-
-
-
 /* การ์ดหลัก (Login/Sign Up box) */
 .custom-card {
     background-color: #FFE6EA; 
@@ -22,13 +17,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .custom-title {
     font-size: 2.5rem;
     color: #f06292;
     font-weight: bold;
 }
-
 
 /* --- Form Styles --- */
 .form-label {
@@ -37,22 +30,18 @@
     margin-bottom: 5px !important;
     display: block !important;
 }
-
-
 .form-control {
     border: 1px solid  #f06292;
     background-color: #F8C8DC;
     border-radius: 10px ;
-    padding: 10px 15px ;
+    padding: 5px 20px ;
+    width: 400px;
 }
-
 
 .form-control:focus {
     border-color:  #f06292 ;
     box-shadow: 0 0 0 0.25rem rgba(240, 98, 146, 0.25) ;
 }
-
-
 
 .btn-custom-pink {
     background-color: #f06292;
@@ -71,8 +60,6 @@
     color: white;
 }
 
-
- 
 .custom-link {
     color: black;
     text-decoration: none;
@@ -82,4 +69,45 @@
 .custom-link:hover {
     color: #e83e8c;
     text-decoration: underline;
+}
+/*----Note---*/
+.gap_down { /*เว้นไม่ให้ติดกันเกินไป*/
+    gap: 7px;;
+    display: grid
+}
+.head_information{ /*ไว้ไฮไลท์ หัวข้อให้เด่นๆ*/
+    background-color: #FFB6C1;
+    font-weight: bold;
+    opacity: 0.9;
+    padding-inline: 50px 5px;
+    border-radius: 15px;
+}
+/* --- index ---*/
+.index_box_main{
+    display: grid;
+    grid-template-columns: 25% 5% 70%;
+}
+.index_box_popular{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+index_box_popular_in{
+    display: grid;
+    grid-template-columns: 10% 5% 85%;
+}
+.index_box_type{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 5px;
+}
+.index-outline-light{
+    background-color: #FF8A9D;
+    color: white;
+}
+.index-outline-light:hover{
+    background-color: #FFB6C1;
+    color: black;
 }
