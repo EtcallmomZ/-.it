@@ -10,6 +10,7 @@
             <th>สิ่งของ</th>
             <th>จำนวน</th>
             <th>ช่วงวันที่ยืม</th>
+            <th>วันที่ร้องข้อ</th>
             <th>สถานะ</th>
             <th>ดำเนินการ</th>
         </tr>
@@ -33,7 +34,7 @@
             </td>
             <td>
                 {% if req.status == 'PENDING' %}
-                    <form method="POST" action="cancel_request" style="display: inline;">
+                    <form method="POST" action="{% url 'cancel_request' req.id %}" style="display: inline;">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-sm btn-danger" 
                                 onclick="return confirm('คุณแน่ใจหรือไม่ที่จะยกเลิกคำขอนี้?');">
