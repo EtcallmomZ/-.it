@@ -10,7 +10,7 @@
 <h1 class="mb-4">สินค้าในหมวดหมู่: {{ category.name }}</h1>
 <p><a href="{% url 'index' %}" class="btn btn-outline-secondary">&larr; กลับไปเลือกหมวดหมู่</a></p>
 
-<div class="row">
+<div class="item_type">
     {% for item in items %}
     <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">

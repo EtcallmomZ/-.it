@@ -6,7 +6,9 @@
     background-color: #FF8A9D;
     color: white;
 }
-
+.moveright{
+    margin-right: 20px;
+}
 /* การ์ดหลัก (Login/Sign Up box) */
 .custom-card {
     background-color: #FFE6EA; 
@@ -78,7 +80,6 @@
 .head_information{ /*ไว้ไฮไลท์ หัวข้อให้เด่นๆ*/
     background-color: #FFB6C1;
     font-weight: bold;
-    opacity: 0.9;
     padding-inline: 50px 5px;
     border-radius: 15px;
 }
@@ -93,7 +94,7 @@
   gap: 20px;
   padding: 20px;
 }
-index_box_popular_in{
+.index_box_popular_in{
     display: grid;
     grid-template-columns: 10% 5% 85%;
 }
@@ -101,7 +102,7 @@ index_box_popular_in{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 5px;
+  padding-bottom: 25px;
 }
 .index-outline-light{
     background-color: #FF8A9D;
@@ -110,4 +111,32 @@ index_box_popular_in{
 .index-outline-light:hover{
     background-color: #FFB6C1;
     color: black;
+}
+
+/*-- user --*/
+.center {
+    display: grid;
+  align-items: center;
+  padding-inline: 50px 50px;
+}
+.box_user{ /* ที่ไว้เก็บข้อความ*/
+    background-color: #FCE4EE;
+    padding: 25px;
+    border-radius: 15px;
+    padding-block: 10px;
+
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+/*--items_by_category--*/
+.item_type{ /*กำลังจาแก้คับ*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-bottom: 25px;
 }
