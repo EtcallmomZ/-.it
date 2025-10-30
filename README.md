@@ -7,3 +7,11 @@
   <p>นางสาวณัชชา ธรรรมเอกภาพ   รหัสนักศึกษา 68070039</p>
   <p>นางสาวนภัทร อยู่เจริญ        รหัสนักศึกษา 68070078</p>
 </div>
+
+<div>
+   <h4>Git hub  <h6><i>***เรียงตามรหัสนักศึกษา***</i></h6></h4>
+    <p><a href = "https://github.com/Firstjaa">Firstjaa</a></p>
+    <p><a href = "https://github.com/Yanisa-Jaja">Yanisa-Jaja</a></p>
+    <p><a href = "https://github.com/EtcallmomZ">EtcallmomZ</a></p>
+    <p><a href = "https://github.com/mooknpat">mooknpat</a></p>
+</div>
