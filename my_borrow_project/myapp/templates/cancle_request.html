@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+   <title>cancel_r</title>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+        <div class="card shadow-lg border-danger">
+            <div class="card-header bg-danger text-white">
+                <h4 class="mb-0">ยืนยันการยกเลิกคำขอยืม</h4>
+            </div>
+            <div class="card-body">
+                <p class="lead">คุณกำลังจะ **ยกเลิก** คำขอยืมนี้:</p>
+                
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><strong>สิ่งของ:</strong> {{ request_obj.item.name }}</li>
+                    <li class="list-group-item"><strong>จำนวน:</strong> {{ request_obj.quantity }} ชิ้น</li>
+                    <li class="list-group-item"><strong>วันที่ยืม:</strong> {{ request_obj.start_date|date:"d M Y" }} ถึง {{ request_obj.end_date|date:"d M Y" }}</li>
+                    <li class="list-group-item"><strong>สถานะปัจจุบัน:</strong> <span class="badge bg-warning text-dark">{{ request_obj.get_status_display }}</span></li>
+                </ul>
+                
+                <p class="text-danger">โปรดทราบ: เมื่อยกเลิกแล้ว คำขอนี้จะหายไปจากรายการที่รออนุมัติทันที</p>
+                
+                <hr>
+
+                <form method="POST" action="{% url 'cancel_request' request_obj.id %}" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-lg">
+                        ใช่, ยืนยันการยกเลิก
+                    </button>
+                </form>
+                
+                <a href="{% url 'user_dashboard' %}" class="btn btn-secondary btn-lg">
+                    ไม่, กลับไปหน้าสถานะ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

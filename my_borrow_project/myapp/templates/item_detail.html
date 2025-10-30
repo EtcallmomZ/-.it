@@ -1,0 +1,48 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div class="row mt-5">
+    
+    <div class="col-md-5">
+        {% if item.image %}
+            <img src="{{ item.image.url }}" class="img-fluid rounded shadow-sm mb-4" alt="{{ item.name }}" style="max-height: 400px; object-fit: cover;">
+        {% else %}
+            <div class="alert alert-light text-center border">
+                <p class="mb-0">ไม่มีรูปภาพอุปกรณ์</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="col-md-7">
+        <h1 class="mb-3">{{ item.name }}</h1>
+        <p class="lead">{{ item.description }}</p>
+        <hr>
+        <p><strong>รหัสสินค้า:</strong> {{ item.serial_number }}</p>
+        
+        <h4 class="mt-4">
+            สถานะปัจจุบัน: 
+            {% if item.total_stock > 0 %}
+                <span class="badge bg-success fs-5">{{ item.total_stock }} ชิ้น พร้อมให้ยืม</span>
+            {% else %}
+                <span class="badge bg-danger fs-5">ไม่ว่างให้ยืม</span>
+            {% endif %}
+        </h4>
+
+        <div class="mt-4">
+            {% if item.total_stock > 0 %}
+                <a href="{% url 'create_borrow_request' item.id %}" class="btn btn-success btn-lg">
+                    ยืมสิ่งของนี้ทันที
+                </a>
+            {% else %}
+                 <button class="btn btn-secondary btn-lg" disabled>
+                    สินค้าหมดชั่วคราว
+                </button>
+            {% endif %}
+        </div>
+        </div>
+
+</div>
+<a href="{% url 'index' %}" class="btn btn-outline-secondary mt-5">
+    &larr; กลับไปดูรายการทั้งหมด
+</a>
+{% endblock %}

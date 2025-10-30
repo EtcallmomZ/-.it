@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %} 
+
+{% block title%}
+
+  <title>ยืมของ</title>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h1 class="mb-4">ส่งคำขอยืม: {{ item.name }}</h1>
+        <p class="lead">โปรดระบุจำนวนและช่วงวันที่ต้องการยืม</p>
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            {{ form|crispy }} 
+
+            <button type="submit" class="btn btn-primary mt-3">ส่งคำขอ</button>
+            <a href="{% url 'item_detail' item.id %}" class="btn btn-secondary mt-3">ยกเลิก</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
