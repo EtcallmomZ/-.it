@@ -9,7 +9,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate , login as auth_login , logout as auth_logout 
 from .models import Item,BorrowRequest,Category  # เราไป import Item มาจากไฟล์ models เพื่อมาเรียกใช้งาน
 
+from pathlib import Path
+from django.conf import settings
+import json
 
+file_path = Path(settings.BASE_DIR) / 'shared_data.json'
+with open(file_path, encoding='utf-8') as f:
+    data = json.load(f)
+print(data)
 
 
 # Create your views here.
