@@ -1,0 +1,15 @@
+# .gitignore
+
+# Database files - MUST be ignored!
+db.sqlite3
+
+# Python/Django environment files
+*.pyc
+__pycache__/
+*.sqlite3-journal
+
+# Environment variables
+.env
+
+# Media files (uploaded user content)
+/media/
