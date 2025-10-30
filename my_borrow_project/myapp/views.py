@@ -29,7 +29,6 @@ def login_view(request):
             user = authenticate(username=username,password=password)
             if user is not None:
                 auth_login(request,user)
-                messages.success(request, f"Welcome back ,{username}")
                 return redirect('index')
             else:
                 messages.error(request,"Invalid username or password.")
