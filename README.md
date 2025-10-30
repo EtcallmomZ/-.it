@@ -9,7 +9,7 @@
 </div>
 
 <div>
-   <h4>Git hub  <h6><i>***เรียงตามรหัสนักศึกษา***</i></h6></h4>
+   <h4>Github  <h6><i>***เรียงตามรหัสนักศึกษา***</i></h6></h4>
     <p><a href = "https://github.com/Firstjaa">Firstjaa</a></p>
     <p><a href = "https://github.com/Yanisa-Jaja">Yanisa-Jaja</a></p>
     <p><a href = "https://github.com/EtcallmomZ">EtcallmomZ</a></p>
