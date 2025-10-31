@@ -111,3 +111,36 @@ index_box_popular_in{
     background-color: #FFB6C1;
     color: black;
 }
+
+.borrow-body{
+    background-color: #efd0d0;
+}
+.borrow-container{
+    margin-top: 60px;
+}
+.box-borrow{
+    background-color: #fbf1f6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,1);
+}
+.button-borrow{
+    background: linear-gradient(90deg, #f2c6e1, #ebecd5);   
+    color: #000804;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-width: 5px;
+    border-color: #80004f;
+}
+.button-borrow-cancel{
+    background: linear-gradient(90deg, #c82b23, #c539a2);   
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-width: 5px;
+    border-color: #000000;
+
+}
+.request-borrow{
+    background-color: #f5dde7;
+    border: 2px solid #000000;
+    border-width: 3px;
+    padding: 15px;
+}
