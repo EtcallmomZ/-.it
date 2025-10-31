@@ -1,12 +1,62 @@
 {% extends "base.html" %}
 
 {% block title %}
-   <title>user</title>
-
+    <title>ข้อมูลส่วนตัว {{ user.username|default:"Guest" }}</title>
 {% endblock %}
 
 {% block content %}
-
-   <h1>Username</h1>
+    <div class="center mt-5">
+        
+        <h1 class="text-center custom-title" style="padding: 10px 1px;">ข้อมูลส่วนตัว</h1>
+        
+        {% if user.is_authenticated %}
+        
+        <div class="custom-card mx-auto p-4 mb-4"> 
+            
+            <h2 style="font-weight: bold; padding: 10px 1px;">บัญชีผู้ใช้</h2>
+            
+            <div class="line">
+                <span>**ชื่อผู้ใช้**</span>
+                <br>
+                <span>{{ user.username|capfirst }}</span> 
+            </div>
+            <hr>
+            
+            <div class="line">
+                <span>ชื่อจริง</span>
+                <br>
+                <span>{{ user.first_name|default:"-" }}</span>
+            </div>
+            <hr>
+            
+            <div class="line">
+                <span>นามสกุล</span>
+                <br>
+                <span>{{ user.last_name|default:"-" }}</span>
+            </div>
+        </div>
+        
+        <div class="custom-card mx-auto p-4">
+            <h2 style="font-weight: bold; padding: 10px 1px;">การเข้าสู่ระบบ</h2>
+            
+            <div class="line">
+                <span>อีเมล</span>
+                <br>
+                <span>{{ user.email|default:"-" }}</span>
+            </div>
+            <hr>
+            
+            <div class="line">
+                <span>เบอร์โทรศัพท์</span>
+                <br>
+                <span>0xx-xxx-xxxx</span>
+            </div>
+        </div>
+        
+        {% else %}
+        <div class="alert alert-danger custom-card mx-auto mt-4 text-center">กรุณาล็อกอินเพื่อดูข้อมูลส่วนตัว</div>
+        {% endif %}
+        
+    </div>
 
 {% endblock %}

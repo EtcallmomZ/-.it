@@ -35,7 +35,8 @@
     background-color: #F8C8DC;
     border-radius: 10px ;
     padding: 5px 20px ;
-    width: 400px;
+    width: 100% !important;;
+    
 }
 
 .form-control:focus {
@@ -143,4 +144,38 @@ index_box_popular_in{
     border: 2px solid #000000;
     border-width: 3px;
     padding: 15px;
+}
+
+
+.custom-title { 
+    font-size: 2.5rem;
+    color: #f06292;
+    font-weight: bold;
+}
+
+.table-pink {
+    background-color: #f2c6e1 !important;
+    color: #495057; 
+}
+
+.btn-pink-cancel { 
+    background: linear-gradient(90deg, #c82b23, #c539a2) !important; 
+    color: white !important;
+    border-color: #000000 !important;
+    border-width: 2px !important;
+}
+.btn-pink-cancel:hover {
+    background: linear-gradient(90deg, #e0b4cf, #d2e4c4) !important; 
+}
+
+
+.bg-pink {
+    background-color: #FF69B4 !important; 
+    color: white;
+}
+
+.btn-pink {
+    background-color: #F08080; 
+    border-color: #FF69B4;
+    color: white;
 }

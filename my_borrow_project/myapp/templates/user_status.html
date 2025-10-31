@@ -1,57 +1,62 @@
 {% extends 'base.html' %} 
 
+
 {% block content %}
-<h1 class="mb-4">แดชบอร์ดผู้ใช้งาน</h1>
+<h1 class="mb-4 custom-title">แดชบอร์ดผู้ใช้งาน</h1>
 <h4 class="text-muted">รายการคำขอยืมของคุณ ({{ user.username }})</h4>
 
-<table class="table table-hover mt-4">
-    <thead class="table-dark">
-        <tr>
-            <th>สิ่งของ</th>
-            <th>จำนวน</th>
-            <th>ช่วงวันที่ยืม</th>
-            <th>วันที่ร้องข้อ</th>
-            <th>สถานะ</th>
-            <th>ดำเนินการ</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for req in my_requests %}
-        <tr>
-            <td>{{ req.item.name }}</td>
-            <td>{{ req.quantity }}</td>
-            <td>{{ req.start_date|date:"d M Y" }} ถึง {{ req.end_date|date:"d M Y" }}</td>
-            <td>
-                {% if req.status == 'PENDING' %}
-                    <span class="badge bg-warning text-dark">{{ req.get_status_display }}</span>
-                {% elif req.status == 'APPROVED' %}
-                    <span class="badge bg-success">{{ req.get_status_display }}</span>
-                {% elif req.status == 'REJECTED' or req.status == 'CANCELLED' %}
-                    <span class="badge bg-danger">{{ req.get_status_display }}</span>
-                {% else %}
-                    <span class="badge bg-secondary">{{ req.get_status_display }}</span>
-                {% endif %}
-            </td>
-            <td>
-                {% if req.status == 'PENDING' %}
-                    <form method="POST" action="{% url 'cancel_request' req.id %}" style="display: inline;">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-sm btn-danger" 
-                                onclick="return confirm('คุณแน่ใจหรือไม่ที่จะยกเลิกคำขอนี้?');">
-                            ยกเลิก
-                        </button>
-                    </form>
-                {% else %}
-                    -
-                {% endif %}
-            </td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="5">คุณยังไม่มีคำขอยืมในระบบ</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="card shadow-sm mt-4"> <div class="card-body">
+        <table class="table table-hover">
+            <thead class="table-pink custom-table-header">
+                <tr>
+                    <th>สิ่งของ</th>
+                    <th>จำนวน</th>
+                    <th>ช่วงวันที่ยืม</th>
+                    <th>วันที่ร้องขอ</th>
+                    <th>สถานะ</th>
+                    <th>ดำเนินการ</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for req in my_requests %}
+                <tr>
+                    <td>{{ req.item.name }}</td>
+                    <td>{{ req.quantity }}</td>
+                    <td>{{ req.start_date|date:"d M Y" }} ถึง {{ req.end_date|date:"d M Y" }}</td>
+                    <td>{{ req.request_date|date:"d M Y" }}</td> 
+                    <td>
+                        {% if req.status == 'PENDING' %}
+                            <span class="badge bg-warning text-dark">{{ req.get_status_display }}</span>
+                        {% elif req.status == 'APPROVED' %}
+                            <span class="badge bg-success">{{ req.get_status_display }}</span>
+                        {% elif req.status == 'REJECTED' or req.status == 'CANCELLED' %}
+                            <span class="badge bg-danger">{{ req.get_status_display }}</span>
+                        {% else %}
+                            <span class="badge bg-secondary">{{ req.get_status_display }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if req.status == 'PENDING' %}
+                            <form method="POST" action="{% url 'cancel_request' req.id %}" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-pink-cancel" 
+                                        onclick="return confirm('คุณแน่ใจหรือไม่ที่จะยกเลิกคำขอนี้?');">
+                                    ยกเลิก
+                                </button>
+                            </form>
+                        {% else %}
+                            -
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">คุณยังไม่มีคำขอยืมในระบบ</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 
 {% endblock %}
