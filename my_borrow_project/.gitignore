@@ -5,8 +5,8 @@ db.sqlite3
 shared_data.json
 
 # Python/Django environment files
-*.pyc
 __pycache__/
+*.pyc
 *.sqlite3-journal
 
 # Environment variables
