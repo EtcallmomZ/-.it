@@ -1,28 +1,39 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %} 
+
 {% block content %}
-<div class="container">
-    <h2>Login</h2>
-
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-
-    <form method="POST" action="">
-        {% csrf_token %} 
-        {{ form.as_p }}
-
-        <button type="submit" class="btn btn-primary">Log In</button>
-    </form>
+<div class="container mt-5">
     
-    <p>
-        Don't have an account? 
-        <a href="{% url 'signup' %}">Sign Up here</a>
-    </p>
+    <div class="row justify-content-center">
+        <div class="col-md-6 custom-card"> 
+            
+            <h2 class="custom-title text-center mb-4">Log in</h2>
 
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="POST" action="">
+                {% csrf_token %} 
+                
+                {{ form|crispy }} 
+
+                <button type="submit" class="btn btn-custom-pink mt-3">
+                    Log In
+                </button>
+            </form>
+            
+            <p class="mt-4 text-center">
+                ยังไม่มีบัญชี? 
+                <a href="{% url 'signup' %}" class="custom-link">Sign Up here</a>
+            </p>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
