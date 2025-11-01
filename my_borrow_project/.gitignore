@@ -1,16 +1,14 @@
 # .gitignore
 
-# Database files - MUST be ignored!
+# ฐานข้อมูล SQLite 
 db.sqlite3
-shared_data.json
 
-# Python/Django environment files
-__pycache__/
-*.pyc
-*.sqlite3-journal
-
-# Environment variables
-.env
-
-# Media files (uploaded user content)
+# โฟลเดอร์สำหรับไฟล์ที่ผู้ใช้อัปโหลด (รูปภาพสินค้า)
 /media/
+
+# ไฟล์ Python ที่สร้างโดยอัตโนมัติ
+*.pyc
+__pycache__/
+
+# ข้อมูลที่ใช้แชร์ระหว่างทีม 
+*.json
